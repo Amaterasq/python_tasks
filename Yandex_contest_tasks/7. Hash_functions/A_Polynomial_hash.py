@@ -22,9 +22,12 @@ h(s) = (s1a^n-1 + s2a^n-2 + s3a^n-3...) mod m
 def polyhash(base, module, string):
     hash = 0
     for c in string:
-        x = ord(c)
-        hash = (hash * base + x) % module
-    return hash
+        hash = hash * base + ord(c)
+    return hash % module
 
 
-print(polyhash(int(input()), int(input()), input()))
+# print(polyhash(int(input()), int(input()), input()))
+
+assert polyhash(123, 100003, 'a') == 97
+assert polyhash(123, 100003, 'hash') == 6080
+assert polyhash(123, 100003, 'HaSH') == 56156
