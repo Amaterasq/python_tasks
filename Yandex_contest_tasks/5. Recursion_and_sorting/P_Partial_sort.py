@@ -47,3 +47,19 @@ B3 = { 6, 5 }
 на которое можно разбить данные при использовании
 метода Частичной сортировки.
 '''
+
+
+def find_number_of_slices(n, array):
+    result, start, end = 0, 0, 1
+    while end < len(array):
+        if max(array[start:end]) <= min(array[end:]):
+            start = end
+            end += 1
+            result += 1
+        else:
+            end += 1
+    result += 1
+    return result
+
+
+print(find_number_of_slices(int(input()), list(map(int, input().split()))))

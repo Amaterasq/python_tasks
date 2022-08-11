@@ -29,3 +29,18 @@
 Гарантируется, что тройка чисел, которая может
 образовать треугольник, всегда есть.
 '''
+
+
+def max_perimeter(n, list):
+    for i in range(len(list) - 2):
+        if list[i] < list[i + 1] + list[i + 2]:
+            return list[i] + list[i + 1] + list[i + 2]
+        i += 1
+
+
+print(
+    max_perimeter(
+        int(input()),
+        sorted(list(map(int, input().split())), reverse=True)
+    )
+)
