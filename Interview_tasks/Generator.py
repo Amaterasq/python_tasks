@@ -13,7 +13,7 @@ def generator(num):
 
 
 a = generator(2)  # С каким начальным числом создаем генератор
-count_iter = 5  # Сколько раз возвращаем результат по условию
+count_iter = 5    # Сколько раз возвращаем результат по условию
 
 for _ in range(count_iter):
     print(next(a))
