@@ -20,6 +20,24 @@ def primes():
         num += 1
 
 
+# Оптимизировано, меньше алгоритмическая сложность через
+# корень значения и принимает отрицательные числа
+# import math
+
+# def is_prime(num):
+#     if num < 0:
+#         return False
+#     if num == 1:
+#         return False
+#     if num == 2:
+#         return True
+#     if num % 2 == 0:
+#         return False
+#     for i in range(3, int(math.sqrt(num) + 1), 2):
+#         if num % i == 0:
+#             return False
+#     return True
+
 # n = primes()
 # for i in range(100):
 #     print(next(n))
